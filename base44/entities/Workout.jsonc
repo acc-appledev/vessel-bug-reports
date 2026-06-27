@@ -1,0 +1,47 @@
+{
+  "name": "Workout",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "strength",
+        "cardio",
+        "flexibility",
+        "sports",
+        "other"
+      ],
+      "default": "strength"
+    },
+    "duration_minutes": {
+      "type": "number"
+    },
+    "intensity": {
+      "type": "string",
+      "enum": [
+        "light",
+        "moderate",
+        "intense"
+      ],
+      "default": "moderate"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "principle": {
+      "type": "string",
+      "description": "Discipline principle for this session"
+    }
+  },
+  "required": [
+    "title",
+    "date"
+  ]
+}

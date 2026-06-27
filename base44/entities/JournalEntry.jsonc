@@ -1,0 +1,37 @@
+{
+  "name": "JournalEntry",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "struggling",
+        "low",
+        "steady",
+        "strong",
+        "victorious"
+      ],
+      "default": "steady"
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "wins": {
+      "type": "string"
+    },
+    "struggles": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "date",
+    "content"
+  ]
+}

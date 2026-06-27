@@ -1,0 +1,39 @@
+{
+  "name": "Habit",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the habit"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Lucide icon name",
+      "default": "Target"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "body",
+        "mind",
+        "spirit"
+      ],
+      "default": "body"
+    },
+    "principle": {
+      "type": "string",
+      "description": "Discipline principle tied to this habit"
+    },
+    "target_per_day": {
+      "type": "number",
+      "default": 1
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Prayer",
+  "type": "object",
+  "properties": {
+    "request": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "family",
+        "health",
+        "work",
+        "guidance",
+        "gratitude",
+        "struggle",
+        "other"
+      ],
+      "default": "other"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "answered": {
+      "type": "boolean",
+      "default": false
+    },
+    "answered_note": {
+      "type": "string"
+    },
+    "answered_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "request"
+  ]
+}

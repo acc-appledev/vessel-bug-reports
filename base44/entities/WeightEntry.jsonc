@@ -1,0 +1,28 @@
+{
+  "name": "WeightEntry",
+  "type": "object",
+  "properties": {
+    "weight": {
+      "type": "number"
+    },
+    "unit": {
+      "type": "string",
+      "enum": [
+        "lbs",
+        "kg"
+      ],
+      "default": "lbs"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "weight",
+    "date"
+  ]
+}

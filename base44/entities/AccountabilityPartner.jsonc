@@ -1,0 +1,27 @@
+{
+  "name": "AccountabilityPartner",
+  "type": "object",
+  "properties": {
+    "inviter_email": {
+      "type": "string",
+      "description": "Email of the user who sent the invite"
+    },
+    "partner_email": {
+      "type": "string",
+      "description": "Email of the invited partner"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "active",
+        "declined"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "inviter_email",
+    "partner_email"
+  ]
+}

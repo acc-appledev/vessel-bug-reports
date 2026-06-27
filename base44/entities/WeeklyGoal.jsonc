@@ -1,0 +1,53 @@
+{
+  "name": "WeeklyGoal",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "e.g. Hit the gym 3 times"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "body",
+        "mind",
+        "spirit",
+        "other"
+      ],
+      "default": "other"
+    },
+    "target": {
+      "type": "number",
+      "description": "Target count / amount",
+      "default": 1
+    },
+    "unit": {
+      "type": "string",
+      "description": "e.g. times, pages, minutes",
+      "default": "times"
+    },
+    "week_start": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date of the Monday that starts this goal's week"
+    },
+    "progress": {
+      "type": "number",
+      "description": "Current progress count",
+      "default": 0
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "linked_habit_id": {
+      "type": "string",
+      "description": "Optional: auto-track from a habit's logs"
+    }
+  },
+  "required": [
+    "title",
+    "target",
+    "week_start"
+  ]
+}

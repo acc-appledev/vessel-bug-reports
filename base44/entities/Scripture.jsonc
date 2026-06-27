@@ -1,0 +1,34 @@
+{
+  "name": "Scripture",
+  "type": "object",
+  "properties": {
+    "reference": {
+      "type": "string",
+      "description": "e.g. Philippians 4:13"
+    },
+    "text": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "discipline",
+        "anxiety",
+        "identity",
+        "strength",
+        "temptation",
+        "gratitude",
+        "hope"
+      ],
+      "default": "strength"
+    },
+    "declaration": {
+      "type": "string",
+      "description": "First-person truth to declare"
+    }
+  },
+  "required": [
+    "reference",
+    "text"
+  ]
+}
